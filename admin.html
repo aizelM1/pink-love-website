@@ -1,0 +1,33 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Letters Admin</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <main class="admin-view">
+      <section class="admin-shell">
+        <div class="admin-heading">
+          <div>
+            <p class="eyebrow">Private inbox</p>
+            <h1>Letters from bebi</h1>
+          </div>
+          <a class="spotify-link" href="index.html">back to site</a>
+        </div>
+
+        <p class="admin-note" id="adminModeNote">
+          Local demo mode. Add Firebase in firebase-config.js to read messages from the online website.
+        </p>
+
+        <div class="admin-list" id="adminMessages"></div>
+      </section>
+    </main>
+
+    <script type="module" src="admin.js"></script>
+  </body>
+</html>

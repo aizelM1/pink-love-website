@@ -1,0 +1,154 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>For You</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <main class="site-shell">
+      <section class="login-view" id="loginView" aria-label="Login">
+        <div class="petal-field" aria-hidden="true"></div>
+        <form class="login-card" id="loginForm">
+          <p class="eyebrow">A little garden made for you</p>
+          <h1>Welcome, my bebi</h1>
+          <label for="email">
+            <span>Email</span>
+            <input id="email" type="text" autocomplete="username" placeholder="email" required />
+          </label>
+          <label for="password">
+            <span>Password</span>
+            <input id="password" type="password" autocomplete="current-password" placeholder="password" required />
+          </label>
+          <p class="login-error" id="loginError" role="alert"></p>
+          <button class="primary-button" type="submit">Sign in</button>
+        </form>
+      </section>
+
+      <section class="garden-view hidden" id="gardenView" aria-label="Love letter garden">
+        <div class="cloud-layer" aria-hidden="true">
+          <span class="cloud cloud-one">i</span>
+          <span class="cloud cloud-two">love</span>
+          <span class="cloud cloud-three">you</span>
+          <span class="cloud cloud-four">forever</span>
+        </div>
+
+        <div class="falling-flowers" aria-hidden="true">
+          <span></span><span></span><span></span><span></span><span></span><span></span>
+          <span></span><span></span><span></span><span></span><span></span><span></span>
+        </div>
+
+        <header class="topbar">
+          <div>
+            <p class="eyebrow">-ayi</p>
+            <h2>i love you, my elli</h2>
+          </div>
+
+          <div class="music-panel" aria-label="Spotify music">
+            <p class="music-note">song added: tap play on spotify, or open it below</p>
+            <iframe
+              class="spotify-player"
+              title="Spotify background music"
+              src="https://open.spotify.com/embed/track/1Qha6JOhv7VKIHzvn8I36I?utm_source=generator&theme=0"
+              width="100%"
+              height="152"
+              frameborder="0"
+              allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"
+              loading="lazy">
+            </iframe>
+            <a class="spotify-link" href="https://open.spotify.com/track/1Qha6JOhv7VKIHzvn8I36I?si=1ba6bd5b1a664e50" target="_blank" rel="noreferrer">
+              open song on spotify
+            </a>
+          </div>
+        </header>
+
+        <section class="letter-stage">
+          <div class="envelope" id="envelope">
+            <button class="ribbon" id="ribbonButton" type="button" aria-label="Pull the ribbon to open the letter">
+              <span>pull the ribbon</span>
+            </button>
+
+            <article class="letter-paper" id="letterPaper">
+              <p>Hi bebi, i love you so much</p>
+            </article>
+          </div>
+        </section>
+
+        <section class="deep-message">
+          <button class="hold-button" id="holdButton" type="button">
+            <span class="hold-ring"></span>
+            <strong>press and hold</strong>
+          </button>
+
+          <p class="secret-message" id="secretMessage">
+            i love you always, ikaw lang palagi bebi
+          </p>
+        </section>
+
+        <section class="gallery-section" aria-label="ur favorite picture of us">
+          <div class="section-heading">
+            <p class="eyebrow">ur favorite picture of us</p>
+            <label class="add-photo">
+              Add photos
+              <input id="photoUpload" type="file" accept="image/*" multiple />
+            </label>
+          </div>
+
+          <div class="gallery" id="gallery">
+            <figure class="photo-card">
+              <img src="assets/memory-1.jpg" alt="ur favorite picture of us" />
+              <figcaption>ur favorite cutie picture of us</figcaption>
+            </figure>
+
+            <figure class="photo-card">
+              <img src="assets/memory-2.jpg" alt="ur favorite picture of us" />
+              <figcaption>ur favorite pretty pretty picture of us</figcaption>
+            </figure>
+
+            <figure class="photo-card">
+              <img src="assets/memory-3.jpg" alt="ur favorite picture of us" />
+              <figcaption>ur favorite cutie pretty picture of us</figcaption>
+            </figure>
+
+            <!-- Add new photos here. Example:
+            <figure class="photo-card">
+              <img src="assets/memory-4.jpg" alt="Favorite picture together" />
+              <figcaption>Our memory</figcaption>
+            </figure>
+            -->
+          </div>
+        </section>
+
+        <section class="message-section" aria-label="Send a letter">
+          <div class="message-card">
+            <p class="eyebrow">Send me a letter</p>
+            <h3>Write anything here, bebi</h3>
+
+            <form id="messageForm" class="message-form">
+              <label for="messageName">Name</label>
+              <input id="messageName" name="name" type="text" value="bebi" required />
+
+              <label for="messageText">Letter</label>
+              <textarea id="messageText" name="message" rows="5" placeholder="type your message here..." required></textarea>
+
+              <button class="primary-button" type="submit">Send letter</button>
+              <p class="message-status" id="messageStatus" role="status"></p>
+            </form>
+
+            <div class="reply-box">
+              <p class="eyebrow">Latest reply</p>
+              <p id="latestReply">No reply yet.</p>
+            </div>
+          </div>
+        </section>
+      </section>
+    </main>
+
+    <script src="script.js"></script>
+    <script type="module" src="messaging.js"></script>
+  </body>
+</html>
