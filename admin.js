@@ -71,7 +71,7 @@ function initLocalAdmin() {
 async function initFirebaseAdmin() {
   adminModeNote.textContent = "Firebase mode. Messages are loading from your online database.";
 
-  const { initializeApp } = await import("https://www.gstatic.com/firebasejs/10.12.5/firebase-app.js");
+  const { initializeApp } = await import("https://console.firebase.google.com/");
   const {
     collection,
     doc,
@@ -80,7 +80,7 @@ async function initFirebaseAdmin() {
     orderBy,
     query,
     updateDoc
-  } = await import("https://www.gstatic.com/firebasejs/10.12.5/firebase-firestore.js");
+  } = await import("https://console.firebase.google.com/");
 
   const app = initializeApp(firebaseConfig);
   const db = getFirestore(app);
